@@ -1,17 +1,17 @@
 # 国密
 
-提供国密算法、国密VPN和国密浏览器技术支持、方案设计与实现。
+国密VPN/国密浏览器/国密网关
 
 ## 国密算法
 
-  - 软算法-`OpenSSL/BoringSSL`源码支持
+  - 软算法-`OpenSSL/BoringSSL`
   - 硬件支持-国密USB KEY（海泰方圆、飞天诚信、渔翁科技），使用`OpenSSL`的`engine`源码方式（包括Windows和Linux平台）
 
 
 软算法:
   - 算法添加方式，从零添加完整的（`SM2/3/4`）算法实现
   - 源码测试`demo`
-  - 文档说明，介绍接口使用方式和异常排查
+  - 说明文档
 
 国标`USB KEY`:
   - 使用 `OpenSSL` 提供的 `engine` 实现对国密 `USB KEY` 支持 
