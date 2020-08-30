@@ -4,22 +4,22 @@
 
 ## 国密算法
 
-  - 软算法-`OpenSSL/BoringSSL`
-  - 硬件支持-国密USB KEY（海泰方圆、飞天诚信、渔翁科技），使用`OpenSSL`的`engine`源码方式（包括Windows和Linux平台）
-
+- 软算法-`OpenSSL/BoringSSL`
+- 硬件支持-国密USB KEY（海泰方圆、飞天诚信、渔翁科技），使用`OpenSSL`的`engine`源码方式（包括Windows和Linux平台）
 
 软算法:
-  - 算法添加方式，从零添加完整的（`SM2/3/4`）算法实现
-  - 源码测试`demo`
-  - 说明文档
+
+- 算法添加方式，从零添加完整的（`SM2/3/4`）算法实现
+- 源码测试`demo`
+- 说明文档
 
 国标`USB KEY`:
-  - 使用 `OpenSSL` 提供的 `engine` 实现对国密 `USB KEY` 支持 
-  - `engine` 便于添加和移除新硬件（测过海泰方圆、飞天诚信和渔翁科技的国密 `USB KEY`）
-  - `BoringSSL` 的 `engine` 实现
 
+- 使用 `OpenSSL` 提供的 `engine` 实现对国密 `USB KEY` 支持 
+- `engine` 便于添加和移除新硬件（测过海泰方圆、飞天诚信和渔翁科技的国密 `USB KEY`）
+- `BoringSSL` 的 `engine` 实现
 
-## 国标VPN 
+## 国标VPN
 
 **《GM/T 0024-2014 SSL VPN技术规范》** 在`OpenSSL/BoringSSL` 的实现，实现的VPN能够与国家商用密码检测中心的测试机通信，并详细说明哪些部分与标准文档中有差异，便于了解实现流程。
 
@@ -41,3 +41,6 @@ Chromium源码集成国标VPN协议，实现国密通信。实现方式可以通
 对于上述两种方案，第一种已经实现并在Windows端测试正常，并与国内的国密浏览器做相应测试[中国银行](https://ebssec.boc.cn/boc15/login.html)，性能突出。
 目前还有[ovssl](https://sm2test.ovssl.cn/)此服务器可以测试国密VPN，但需要使用具备国密VPN通信的浏览器，否则为TLS协议
 
+## GmSSL完善
+
+添加sm2dhe的SM2_compute_share_key的实现方式，具体内容参考《GM/T 0009-2012  SM2 密码算法使用规范》的9.6内容。
