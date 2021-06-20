@@ -46,3 +46,10 @@ Chromium源码集成国标VPN协议,实现国密通信。实现方式可以通�
 ## GmSSL完善
 
 添加sm2dhe的SM2_compute_share_key的实现方式,具体内容参考《GM/T 0009-2012  SM2 密码算法使用规范》的9.6内容。
+
+## OpenSSL3.0国密套件
+
+openssl3.0文件夹内包含了最新的openssl代码支持国密0024-2014的E013密码套件的静态库，头文件，可执行文件openssl和测试用例。
+
+- 国密测试：openssl s_client -smtls -msg -debug -connect ebssec.boc.cn:443
+- TLS测试：openssl s_client -tls1_2 -msg -debug -connect www.baidu.com:4
