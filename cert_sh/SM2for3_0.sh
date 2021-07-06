@@ -6,7 +6,7 @@
 OPENSSL_DIR=.
 # Path to the openssl program
 #OPENSSL_CMD=openssl
-OPENSSL_CMD=gmssl
+OPENSSL_CMD=openssl
 # Option to find configuration file
 OPENSSL_CNF="-config ./openssl.cnf"
 # Directory where certificates are stored
@@ -334,3 +334,4 @@ echo "Verify $TEST_CLIENT_FILE use $TEST_CA_FILE.cert.pem"
 $OPENSSL_CMD verify -CAfile $CERTS_DIR/$TEST_CA_FILE.cert.pem $CERTS_DIR/$TEST_CLIENT_FILE.pem
 echo "Verify $TEST_CLIENT_ENC_FILE use $TEST_CA_FILE.cert.pem"
 $OPENSSL_CMD verify -CAfile $CERTS_DIR/$TEST_CA_FILE.cert.pem $CERTS_DIR/$TEST_CLIENT_ENC_FILE.pem
+
