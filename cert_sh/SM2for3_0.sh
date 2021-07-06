@@ -6,7 +6,7 @@
 OPENSSL_DIR=.
 # Path to the openssl program
 #OPENSSL_CMD=openssl
-OPENSSL_CMD=gmssl
+OPENSSL_CMD=openssl
 # Option to find configuration file
 OPENSSL_CNF="-config ./openssl.cnf"
 # Directory where certificates are stored
