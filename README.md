@@ -52,4 +52,4 @@ Chromium源码集成国标VPN协议,实现国密通信。实现方式可以通�
 openssl3.0文件夹内包含了最新的openssl代码支持国密0024-2014的E013密码套件的静态库，头文件，可执行文件openssl和测试用例。
 
 - 国密测试：openssl s_client -smtls -msg -debug -connect ebssec.boc.cn:443
-- TLS测试：openssl s_client -tls1_2 -msg -debug -connect www.baidu.com:4
+- TLS测试：openssl s_client -tls1_2 -msg -debug -connect www.baidu.com:443
